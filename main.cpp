@@ -5,31 +5,37 @@
 using namespace std;
 
 int vvod(int stolbec, int stroka, double **ptrarr, int w);
-int proverka(int stroka, int stolbec, double **ptrarr, int w);
+int proverka(int w);
 
 int main() {
+    int prover = 0, stroka = 0, stolbec = 0, w = 0;
+    prover = proverka(w);
+    if (prover != 0) {
+        return 666;
+    }
 
     return 0;
 }
 
-int proverka(int stroka, int stolbec, double **ptrarr, int w) {
+int proverka(int w) {
     fstream f;
 
     f.open("../cmake-build-debug/in.txt", ios::in);
     if (f.bad() != 0) {
         cout << "Что-то пошло не так" << endl;
         return 666;
-    } else {
-        f >> stroka >> stolbec;
-        auto **ptrarr = new double *[stroka];
-        for (int i = 0; i <= stolbec - 1; i++)
-            ptrarr[i] = new double[stolbec];
-        if (stolbec <= 0 || stroka <= 0) {
-            cout << "\nКоличество элементов не может быть нулевым или отрицательным!" << endl;
-            return 666;
-        }
-        f.close();
     }
+//    else {
+//        f >> stroka >> stolbec;
+//        auto **ptrarr = new double *[stroka];
+//        for (int i = 0; i <= stolbec - 1; i++)
+//            ptrarr[i] = new double[stolbec];
+//        if (stolbec <= 0 || stroka <= 0) {
+//            cout << "\nКоличество элементов не может быть нулевым или отрицательным!" << endl;
+//            return 666;
+//        }
+//        f.close();
+//    }
     return 0;
 }
 int vvod(int stolbec, int stroka, double **ptrarr, int w) {
