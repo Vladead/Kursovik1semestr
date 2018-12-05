@@ -1,0 +1,3 @@
+/home/vladead/CLionProjects/Kursovik/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/vladead/CLionProjects/Kursovik/cmake-build-debug/CMakeFiles/Kursovic.dir
+/home/vladead/CLionProjects/Kursovik/cmake-build-debug/CMakeFiles/edit_cache.dir
