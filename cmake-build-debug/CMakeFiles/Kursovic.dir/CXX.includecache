@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vladead/CLionProjects/Kursovik/main.cpp
+iostream
+-
+fstream
+-
+iomanip
+-
+cmath
+-
+set
+-
+tuple
+-
+

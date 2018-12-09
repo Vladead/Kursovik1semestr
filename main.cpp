@@ -2,15 +2,31 @@
 #include <fstream>
 #include <iomanip>
 #include <cmath>
+#include <set>
+#include <tuple>
 using namespace std;
 
-int vvod(int stolbec, int stroka, double **ptrarr, int w);
+struct point
+{
+    point(double x, double y) : x(x), y(y) {}
+    double x;
+    double y;
+};
+
+struct compare {
+    bool operator() (const point&lhs, const point& rhs) const {
+        return std::tie(lhs.x, lhs.y) < std::tie(rhs.x, rhs.y);
+    }
+};
+
+set<point, compare> vvod(set<point, compare> container, int a, double b);
 int proverka();
 
 int main() {
     fstream f;
-    int prover = 0, tochek = 0;
+    int prover = 0, tochek = 0, a = 0, b = 0, w = 0;
     double radius = 0;
+    set<point, compare> vivod{};
     prover = proverka();
     if (prover != 0)
         return 666;
@@ -18,14 +34,13 @@ int main() {
     f.open("../cmake-build-debug/in.txt", ios::in);
     f >> tochek >> radius;
     tochek = abs(tochek);
-
-
-    auto **ptrarr = new double *[tochek];
-    for (int i = 0; i <= tochek - 1; i++)
-        ptrarr[i] = new double[2];
+    vivod = vvod(vivod, tochek, radius);
+    for(auto item : vivod)
+    {
+        cout << item.x << ";" << item.y << std::endl;
+    }
 
     f.close();
-    delete[] ptrarr;
     return 0;
 }
 
@@ -55,39 +70,17 @@ int proverka() {
     f.close();
     return 0;
 }
-int vvod(int stolbec, int stroka, double **ptrarr, int w) {
+set<point, compare> vvod(set<point, compare> container, int a, double b) {
     fstream f;
-    char s;
+    double schet_x = 0, schet_y = 0;
+
     f.open("../cmake-build-debug/in.txt", ios::in);
-    f >> stroka >> stolbec;
-    if (stolbec > 0 && stroka > 0) {
-        for (int i = 0; i <= stroka - 1; i++) {
-            for(int j = 0; j <= stolbec - 1; j ++) {
-                f >> w;
-                if (f.eof() && (i <= stroka - 1)) {
-                    cout << "Не хватило строк " << endl;
-                    return 666;
-                }
-                ptrarr[i][j] = w;
-                if (j == stolbec - 1) {
-                    f.unsetf(ios::skipws);
-                    while(true) {
-                        f >> s;
-                        if (s == '\n') {
-                            f.setf(ios::skipws);
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        for (int i = 0; i <= stroka - 1; i++) {
-            for (int j = 0; j <= stolbec - 1; j++) {
-                cout << setw(2) << ptrarr[i][j];
-            }
-            cout << "\n";
-        }
+    f >> a >> b;
+    a = abs(a);
+    for (int i = 0; i <= a - 1; i++) {
+        f >> schet_x >> schet_y;
+        container.insert(point(schet_x, schet_y));
     }
     f.close();
-    return 0;
+    return container;
 }
