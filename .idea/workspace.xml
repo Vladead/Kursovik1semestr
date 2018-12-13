@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/main.cpp" line="92" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="Kursovic" targetName="Kursovic" />
@@ -11,13 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aed0a64e-e33b-4500-8311-b0c9a9f1edc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Kursovic.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Kursovic.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Kursovic.dir/main.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Kursovic" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/in.txt" afterDir="false" />
+    <list default="true" id="aed0a64e-e33b-4500-8311-b0c9a9f1edc4" name="Default Changelist" comment="Удаление set и создание массива структур">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Kursovic.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Kursovic.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Kursovic" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Kursovic" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -38,10 +38,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="195">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#129#246#1" />
+                <element signature="e#1248#1796#0" />
+                <element signature="e#3043#3518#0" />
+                <element signature="e#3519#4390#0" />
               </folding>
             </state>
           </provider>
@@ -59,11 +63,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-377" />
-    <option name="y" value="27" />
-    <option name="width" value="1853" />
-    <option name="height" value="789" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="988" />
+    <option name="y" value="25" />
+    <option name="width" value="932" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -74,7 +78,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Прога 5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -134,7 +138,16 @@
       <workItem from="1543999740062" duration="1125000" />
       <workItem from="1544025157397" duration="4518000" />
       <workItem from="1544035749004" duration="4933000" />
-      <workItem from="1544356376069" duration="2371000" />
+      <workItem from="1544356376069" duration="6154000" />
+      <workItem from="1544368926299" duration="3770000" />
+      <workItem from="1544387137572" duration="1339000" />
+      <workItem from="1544467718165" duration="4403000" />
+      <workItem from="1544552978312" duration="378000" />
+      <workItem from="1544553368679" duration="9361000" />
+      <workItem from="1544604121465" duration="96000" />
+      <workItem from="1544704806934" duration="2023000" />
+      <workItem from="1544707056047" duration="2520000" />
+      <workItem from="1544726373395" duration="1048000" />
     </task>
     <task id="LOCAL-00001" summary="Добавление проверки файла в отдельной функции">
       <created>1544000754770</created>
@@ -150,31 +163,39 @@
       <option name="project" value="LOCAL" />
       <updated>1544028669071</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Реализация записи данных в контейнер set">
+      <created>1544359188917</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544359188918</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14731000" />
+    <option name="totallyTimeSpent" value="43452000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="25" width="932" height="1055" extended-state="4" />
+    <frame x="988" y="25" width="932" height="1055" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3442438" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.29389104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39956802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32829374" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39848813" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32900432" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32937366" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32937366" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.29157668" />
       <window_info anchor="bottom" id="CMake" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.34341252" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3423326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -197,18 +218,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавление проверки файла в отдельной функции" />
     <MESSAGE value="Добавление проверки файла, точек и радиуса в отдельной функции" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление проверки файла, точек и радиуса в отдельной функции" />
+    <MESSAGE value="Реализация записи данных в контейнер set" />
+    <MESSAGE value="Удаление set и создание массива структур\" />
+    <MESSAGE value="Удаление set и создание массива структур" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удаление set и создание массива структур" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>73</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="array-&gt;y" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/include/c++/7/bits/stl_function.h">
@@ -223,10 +243,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="195">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#129#246#1" />
+            <element signature="e#1248#1796#0" />
+            <element signature="e#3043#3518#0" />
+            <element signature="e#3519#4390#0" />
           </folding>
         </state>
       </provider>
