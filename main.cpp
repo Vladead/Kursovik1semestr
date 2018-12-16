@@ -127,6 +127,12 @@ double peresechenya(Point *array, Line *array_line, Point *array_intersection, i
                 B2 = (array_line + i2 + 1)->B;
                 C1 = (array_line + i1)->C;
                 C2 = (array_line + i2 + 1)->C;
+                if(Collinear(A1, A2, B1, B2)) {
+                    break;
+                }
+                if(Overlap(A1, A2, B1, B2, C1, C2)) {
+                    break;
+                }
                 if(A1 != 0) {
                     Y = ((C2 * A1 - C1 * A2) / (A1 * B2 - B1 * A2));
                     X = (-B1 * Y + C1) / A1;
@@ -142,7 +148,12 @@ double peresechenya(Point *array, Line *array_line, Point *array_intersection, i
     }
     return  0;
 }
-void vivod_v_file(Point *array, int tochek, double radius) {
+
+double Dot_score(Point *array, Point *array_intersection, int tochek, double radius) {
+
+}
+
+void vivod_v_file(Point *array, Point *array_intersection, Line *array_line, int tochek, double radius, int line) {
     //------------------------------------------------------------------------------------Вывод насчитанного в программе
     fstream g;
 
@@ -155,7 +166,18 @@ void vivod_v_file(Point *array, int tochek, double radius) {
         auto item = array + i;
         g << item->x << ";" << item->y << endl;
     }
-
+    g << endl;
+    g << "Найденные точки пересечения: " << endl;
+    for (int i = 0; i <= line*3 - 1; i++) {
+        auto item = array_intersection + i;
+        g << item->x << ";" << item->y << endl;
+    }
+    g << endl;
+    g << "Вычисленные коэффициенты прямых: " << endl;
+    for (int i = 0; i <= line - 1; i++) {
+        auto item = array_line + i;
+        g << "A: " << item->A << ";" << "B: " << item->B << ";" << "C:" << item->C <<  endl;
+    }
     g.close();
 }
 
@@ -176,36 +198,10 @@ void vivod_v_file(Point *array, int tochek, double radius) {
 //}
 
 
-//        count_line = tochek * (tochek - 1) / 2;
-//        count_line2 = tochek - 2;
-//        for (int i = 0; i <= tochek - 1; i++) {
-//            //Создание первой прямой
-//            y11 = (array + i)->y;
-//            y12 = (array + (i+1))->y;
-//            x11 = (array + i)->x;
-//            x12 = (array + (i+1))->x;
-//
-//            A1 = y11 - y12;
-//            B1 = x12 - x11;
-//            C1 = x11*y12 - x12*y11;
-//            for (int j = 0; j <= count_line2 - 1; j++) {
-//                //Создание следующих прямых
-//                y22 = (array + j + 2)->y;
-//                x22 = (array + j + 2)->x;
-//
-//                A2 = y11 - y22;
-//                B2 = x22 - x11;
-//                C2 = x11*y22 - x22*y11;
-//
-//                //Нахождение координаты точки пересечения
-//            }
-//            //count_line2--;
-//        }
-
 int main() {
     //----------------------------------------------------------!!!Не забудь изменить вывод в консоль на вывод в файл!!!
     fstream f;
-    int tochek = 0, line = 0;
+    int tochek = 0, line = 0, Max_DotScore = 0;
     bool check = false;
     double radius = 0, x = 0, y = 0;
 
@@ -213,7 +209,7 @@ int main() {
     if (check != 0)
         return 666;
 
-    f.open("../cmake-build-debug/in.txt", ios::in);
+    f.open("../cmake-build-debug/in.txt", ios::in);    //Открытие входного файла
     f >> tochek >> radius;
     tochek = abs(tochek);
     line = tochek*(tochek - 1)/2;
@@ -221,6 +217,7 @@ int main() {
     auto *array_line = new Line[line];  //Создание массива структур для прямых
     auto *array_intersection = new Point[line*3]; //Создание массива структур для точек пересечения
     vvod(array, tochek, radius);        //Заполнение массива структур
+    f.close();      //Закрытие входного файла
     for (int i = 0; i <= tochek - 1; i++) {
         auto item = array + i;
         cout << item->x << ";" << item->y << endl;
@@ -237,10 +234,10 @@ int main() {
         auto item = array_line + i;
         cout << item->A << ";" << item->B << ";" << item->C <<  endl;
     }
-    vivod_v_file(array, tochek, radius);    //Вывод в файл
+
+    vivod_v_file(array, array_intersection, array_line, tochek, radius, line);    //Вывод в файл
     delete[] array; //Очистка памяти
     delete[] array_line;
     delete[] array_intersection;
-    f.close();      //Закрытие входного файла
     return 0;
 }

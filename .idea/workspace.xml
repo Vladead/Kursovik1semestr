@@ -13,6 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aed0a64e-e33b-4500-8311-b0c9a9f1edc4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Kursovic.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Kursovic.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/protocol.odt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/protocol.odt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -33,19 +36,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="168" column="27" selection-start-line="168" selection-start-column="27" selection-end-line="168" selection-end-column="27" />
+            <state relative-caret-position="705">
+              <caret line="200" column="12" selection-start-line="200" selection-start-column="12" selection-end-line="200" selection-end-column="12" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#78#195#1" />
-                <element signature="e#197#216#1" />
-                <element signature="e#198#322#0" />
-                <element signature="e#324#486#0" />
-                <element signature="e#546#745#0" />
-                <element signature="e#697#969#0" />
-                <element signature="e#1825#2696#0" />
-                <element signature="e#4850#5447#0" />
-                <element signature="e#5049#5089#0" />
               </folding>
             </state>
           </provider>
@@ -66,7 +61,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="57" />
     <option name="y" value="25" />
-    <option name="width" value="1863" />
+    <option name="width" value="932" />
     <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -155,7 +150,9 @@
       <workItem from="1544818640762" duration="4447000" />
       <workItem from="1544875399924" duration="6587000" />
       <workItem from="1544904172641" duration="4948000" />
-      <workItem from="1544957954794" duration="27522000" />
+      <workItem from="1544957954794" duration="31415000" />
+      <workItem from="1544997255668" duration="53000" />
+      <workItem from="1544997397179" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="Добавление проверки файла в отдельной функции">
       <created>1544000754770</created>
@@ -192,21 +189,28 @@
       <option name="project" value="LOCAL" />
       <updated>1544910273902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Создание работающей функции, которая вычисляет координату точки пересечения между двумя прямыми">
+      <created>1544993467530</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544993467530</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91514000" />
+    <option name="totallyTimeSpent" value="95471000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="988" y="25" width="932" height="1055" extended-state="4" />
+    <frame x="57" y="25" width="1863" height="1055" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.29223996" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3256059" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3256059" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34562698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -243,18 +247,10 @@
     <MESSAGE value="Удаление set и создание массива структур\" />
     <MESSAGE value="Удаление set и создание массива структур" />
     <MESSAGE value="Выделение в отдельные функции определения параллельности и совпадения прямых. Добавление функции, которая находит расстояние от точки до точки." />
-    <option name="LAST_COMMIT_MESSAGE" value="Выделение в отдельные функции определения параллельности и совпадения прямых. Добавление функции, которая находит расстояние от точки до точки." />
+    <MESSAGE value="Создание работающей функции, которая вычисляет координату точки пересечения между двумя прямыми" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание работающей функции, которая вычисляет координату точки пересечения между двумя прямыми" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>58</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="array-&gt;y" />
@@ -274,19 +270,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="168" column="27" selection-start-line="168" selection-start-column="27" selection-end-line="168" selection-end-column="27" />
+        <state relative-caret-position="705">
+          <caret line="200" column="12" selection-start-line="200" selection-start-column="12" selection-end-line="200" selection-end-column="12" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <element signature="e#78#195#1" />
-            <element signature="e#197#216#1" />
-            <element signature="e#198#322#0" />
-            <element signature="e#324#486#0" />
-            <element signature="e#546#745#0" />
-            <element signature="e#697#969#0" />
-            <element signature="e#1825#2696#0" />
-            <element signature="e#4850#5447#0" />
-            <element signature="e#5049#5089#0" />
           </folding>
         </state>
       </provider>
